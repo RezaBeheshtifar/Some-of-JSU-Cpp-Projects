@@ -1,0 +1,29 @@
+// Depth: 3
+init_Tiles[0]=1; init_Tiles[1]=2; init_Tiles[2]=3;
+init_Tiles[3]=0; init_Tiles[4]=5; init_Tiles[5]=6;
+init_Tiles[6]=4; init_Tiles[7]=7; init_Tiles[8]=8;
+
+// Depth: 6
+init_Tiles[0]=4; init_Tiles[1]=1; init_Tiles[2]=2;
+init_Tiles[3]=5; init_Tiles[4]=0; init_Tiles[5]=3;
+init_Tiles[6]=7; init_Tiles[7]=8; init_Tiles[8]=6;
+
+// Depth: 7
+init_Tiles[0]=4; init_Tiles[1]=1; init_Tiles[2]=3;
+init_Tiles[3]=7; init_Tiles[4]=2; init_Tiles[5]=5;
+init_Tiles[6]=8; init_Tiles[7]=0; init_Tiles[8]=6;
+
+// Depth: 18
+init_Tiles[0]=0; init_Tiles[1]=6; init_Tiles[2]=8;
+init_Tiles[3]=3; init_Tiles[4]=1; init_Tiles[5]=5;
+init_Tiles[6]=4; init_Tiles[7]=2; init_Tiles[8]=7;
+
+// Depth: 21
+init_Tiles[0]=3; init_Tiles[1]=6; init_Tiles[2]=1;
+init_Tiles[3]=0; init_Tiles[4]=7; init_Tiles[5]=8;
+init_Tiles[6]=4; init_Tiles[7]=5; init_Tiles[8]=2;
+
+// Depth: 26
+init_Tiles[0]=0; init_Tiles[1]=7; init_Tiles[2]=1;
+init_Tiles[3]=6; init_Tiles[4]=5; init_Tiles[5]=8;
+init_Tiles[6]=3; init_Tiles[7]=4; init_Tiles[8]=2;

@@ -1,0 +1,2 @@
+> rand()/RAND_MAX --> 0 to 1
+> rand()%(b-a+1)+a

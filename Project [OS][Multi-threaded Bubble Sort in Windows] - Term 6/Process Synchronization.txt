@@ -1,0 +1,53 @@
+Process Synchronization for NumberOfCores=4
+1st Try:
+
+	bubbleSort()				merge()					merge() //Final Merge
+	{					{					{
+	---					wait(SHandle[0])			wait(SHandle[1])
+	signal(SHandle[0])			wait(SHandle[0])			wait(SHandle[1])
+	}					---					---
+						signal(SHandle[1])			signal(SHandle[2])
+	bubbleSort()				}					}
+	{
+	---					merge()
+	signal(SHandle[0])			{
+	}					wait(SHandle[0])
+						wait(SHandle[0])
+	bubbleSort()				---
+	{					signal(SHandle[1])
+	---					}
+	signal(SHandle[0])
+	}
+
+	bubbleSort()
+	{
+	---
+	signal(SHandle[0])
+	}
+
+Process Synchronization for NumberOfCores=4
+2nd Try:
+
+	bubbleSort()				merge()					merge() //Final Merge
+	{					{					{
+	---					wait(MutexHandle[0])			wait(MutexHandle[1])
+	signal(SHandle[0])			wait(SHandle[0])			wait(SHandle[1])
+	}					wait(SHandle[0])			wait(SHandle[1])
+						signal(MutexHandle[0])			signal(MutexHandle[1])
+	bubbleSort()				---					---
+	{					signal(SHandle[1])			signal(SHandle[2])
+	---					}					}
+	signal(SHandle[0])
+	}					merge()
+						{
+	bubbleSort()				wait(MutexHandle[0])
+	{					wait(SHandle[0])
+	---					wait(SHandle[0])
+	signal(SHandle[0])			signal(MutexHandle[0])
+	}					---
+						signal(SHandle[1])
+	bubbleSort()				}
+	{
+	---
+	signal(SHandle[0])
+	}
